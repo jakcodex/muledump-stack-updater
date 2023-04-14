@@ -1,0 +1,12 @@
+{
+  "ImageId": "ami-06e46074ae430fba6",
+  "InstanceType": "c6a.large",
+  "KeyName": "my-keypair",
+  "MaxCount": 1,
+  "MinCount": 1,
+  "SecurityGroupIds": ["security-group-id"],
+  "IamInstanceProfile": {
+    "Arn": "arn:aws:iam::account-id:instance-profile/role-name"
+  },
+  "InstanceInitiatedShutdownBehavior": "terminate"
+}

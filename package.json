@@ -1,0 +1,17 @@
+{
+  "name": "muledump-stack-updater",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "@aws-sdk/client-ec2": "^3.309.0",
+    "@aws-sdk/client-s3": "^3.309.0",
+    "@aws-sdk/client-secrets-manager": "^3.309.0"
+  }
+}

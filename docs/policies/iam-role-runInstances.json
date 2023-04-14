@@ -1,0 +1,39 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "ec2:RunInstances",
+      "Resource": [
+        "arn:aws:ec2:region:account-id:instance/*"
+      ],
+      "Condition": {
+        "StringEquals": {
+          "ec2:InstanceType": [
+            "c6a.large"
+          ]
+        }
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": "ec2:RunInstances",
+      "Resource": [
+        "arn:aws:ec2:region::image/ami-*",
+        "arn:aws:ec2:region:account-id:subnet/*",
+        "arn:aws:ec2:region:account-id:network-interface/*",
+        "arn:aws:ec2:region:account-id:volume/*",
+        "arn:aws:ec2:region:account-id:key-pair/my-keypair-name",
+        "arn:aws:ec2:region:account-id:security-group/security-group-id"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:GetRole",
+        "iam:PassRole"
+      ],
+      "Resource": "arn:aws:iam::account-id:role/muledump-stack-updater-role"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "Version": "2008-10-17",
+  "Id": "PolicyForCloudFrontPrivateContent",
+  "Statement": [
+    {
+      "Sid": "1",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": [
+          "arn:aws:iam::account-id:role/service-role/lambda-muledump-stack-updater-role-name",
+          "arn:aws:iam::account-id:role/service-role/lambda-muledump-renders-rotmg-version-monitor-role-name",
+          "arn:aws:iam::account-id:user/iam-user-name"
+        ]
+      },
+      "Action": "s3:*",
+      "Resource": [
+        "arn:aws:s3:::s3-bucket-name",
+        "arn:aws:s3:::s3-bucket-name/*"
+      ]
+    }
+  ]
+}
